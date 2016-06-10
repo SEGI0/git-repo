@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!--<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+<!-- <!--<link href="js/tasks.js" type="text/javascript" />-->
+<script type="text/javascript">
+
+
+	function game() {
+		var Nomber = parseInt(Math.random()*100);
+		var tryCount = 0;
+		var quit = "q";
+
+		while (true) {
+
+			tryCount++;
+
+				var userNomber = prompt("Введите число от 1 до 100:");
+
+		if (Nomber == userNomber) {
+          alert('Ура ты угадал!');
+          alert('Игра окончена! Тебе понадобилось ' + tryCount + ' попыток');
+          break;
+        } else if (userNomber < 1 || userNomber > 100) {
+          alert('Ну я же просил, ввести число от 1 до 100');
+        } else if (userNomber > Nomber) {
+          alert('Попытайся еще раз, твое число слишком большое');
+        } else if (userNomber < Nomber) {
+          alert('Попытайся еще раз, твое число слишком маленькое');
+        } else if (userNomber == quit) {
+          alert('Слабак! Игра окончена!');
+          break;
+        }
+	}
+}
+
+</script>
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru" target="_blank">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html" target="_blank">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+<!--	<div class="row">
+ 		<div class="col-xs-12 col-md-12">--->
+	<div id="content_title">	
+		<h2>Игра Угадайка</h2>
+	</div>
+	<!--	</div>--->
+
+	 <div id="content">
+	 <!--		<div class="col-xs-12 col-md-12">
+		<h3>Отгадай загадки!</h3>  
+		</br></br>
+				</div> --->
+		<p>Введи число от 1 до 100. Для выхода введи q.<p/>
+				<!---<input type="text" id="userNomber" /> ввод ответ в поле, соответствие ответа с загадкой по id --->
+				</br></br></br></br>
+
+				<input type="button" value="Нажми для начала игры" onClick="game()" />
+				</br></br></br></br>
+				
+				<p>ЗЫ: Прийдется еще поработать для усовершенствования игры :( <p/>
+			</div>
+
+
+		</div>
+
+			<div id="tooplate_footer">    
+   				Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+   			 </div>
+    
+		</div> <!-- end of warpper -->
+
+	</body>
+</html>

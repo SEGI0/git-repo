@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!--<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+<!-- <!--<link href="js/tasks.js" type="text/javascript" />-->
+<script type="text/javascript">
+
+	function checkAnswers(tagName, answer){
+		
+		userAnswer = document.getElementById(tagName).value; //поиск tagName, поулчение его значения и присвоение для сравнения с правильным ответом
+		if(userAnswer.toLowerCase() == answer) // не чувствительность к регистру, проверка ответа
+			return true; // ответ правильный
+		else
+			return false; // ответ не правильный
+	}
+
+	function cheackAnswers(){ // проверка и посчет правильных ответов
+
+		var goodAnswer = 0;
+		if(checkAnswers('puzzle1', 'капуста'))
+			goodAnswer++; //счетчик правильных ответов
+		if(checkAnswers('puzzle2', 'елка'))
+			goodAnswer++;
+		if(checkAnswers('puzzle3', 'ножницы'))
+			goodAnswer++;
+		if(checkAnswers('puzzle4', 'лук'))
+			goodAnswer++;
+
+		if(goodAnswer == 0)
+			alert('Вы ничего не угадали');
+		else
+			alert('Количество правильных ответов: ' + goodAnswer);		
+	}
+
+</script>
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru" target="_blank">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html" target="_blank">Угадайка</a></li>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+<!--	<div class="row">
+ 		<div class="col-xs-12 col-md-12">--->
+	<div id="content_title">	
+		<h2>Игра в загадки</h2>
+	</div>
+	<!--	</div>--->
+
+	 <div id="content">
+	 <!--		<div class="col-xs-12 col-md-12">--->
+		<h3>Отгадай загадки!</h3>  
+		</br></br>
+	<!--	 </div> --->
+			  <div class="colleft"> <!--col-xs-6 col-md-6-->
+
+				<p>Сто одежек и все без застежек<p/>
+				<input type="text" id="puzzle1" /> <!---ввод ответ в поле, соответствие ответа с загадкой по id --->
+				</br></br></br></br>
+
+					
+				<p>Зимой и летом одним цветом <p/>
+				<input type="text" id="puzzle2" />
+				</br></br></br></br>
+			</div>
+			<div class="colright"> <!--col-xs-6 col-md-6-->
+				<p>Два кольца два конца, а по средине гвоздик<p/>
+				<input type="text" id="puzzle3" />
+				</br></br></br>
+
+				<p>Сидит дед во сто шуб одет, кто его раздевает тот слезы проливает<p/>
+				<input type="text" id="puzzle4" />
+				</br></br></br></br>
+
+			</div>
+				<input type="button" value="Ответить" onClick="cheackAnswers()" />
+			</div>
+
+
+		</div>
+
+			<div id="tooplate_footer">    
+   				Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+   			 </div>
+    
+		</div> <!-- end of warpper -->
+
+	</body>
+</html>
